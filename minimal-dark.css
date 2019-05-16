@@ -1,0 +1,718 @@
+/*General*/
+
+html {
+	background-color: #444;
+}
+
+body {
+	font-size: 100%;
+	font-family: sans-serif;
+	max-width: 90vw;
+	max-width: 800px;
+	margin: 0 auto;
+	background-color: #444;
+	color: #fff;
+}
+
+body>div,
+body>form,
+body>fieldset {
+	max-width: 800px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+body>div table {
+	width: 100%;
+}
+
+body>fieldset {
+	max-width: 100%;
+}
+
+a {
+	color: inherit;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: inherit;
+}
+
+pre {
+	font-family: courier;
+	color: #fff;
+}
+
+
+/*Autorefresh checkbox*/
+
+body>#printers_st+form {
+	text-align: center;
+}
+
+
+/*Tables*/
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th,
+td {
+	padding: 3px;
+}
+
+fieldset {
+	margin-bottom: 1em;
+	border: none;
+}
+
+legend {
+	font-weight: bold;
+	border-bottom: 2px solid #fff;
+}
+
+table th {
+	background-color: #adadad30;
+}
+
+table td,
+table th {
+	padding: 5px;
+}
+
+#disks_st td,
+#raid_st td,
+#mounted_filesystems_st td,
+#mounted_remote_filesystems_st td,
+#backup_st td,
+#filesystem_maintenance_st td,
+#printers_st td,
+#disks_st th,
+#raid_st th,
+#mounted_filesystems_st th,
+#mounted_remote_filesystems_st th,
+#backup_st th,
+#filesystem_maintenance_st th,
+#printers_st th {
+	min-height: 34px;
+}
+
+div:not(#systems_st) table td,
+div:not(#systems_st) table tr,
+div:not(#systems_st) table th {
+	text-align: center;
+}
+
+
+/*Forms*/
+
+select,
+input {
+	font-size: 0.8em;
+}
+
+select {
+	min-height: 24px;
+	background-color: #fff;
+}
+
+input {
+	background-color: #fff;
+	color: #444;
+	border-radius: 5px;
+}
+input[type=submit]:disabled {
+	background-color: #585858;
+	color: #fff;
+}
+
+input[type=checkbox] {
+	margin: 5px;
+}
+
+input[type="submit"],
+input[type="file"],
+select {
+	border-radius: 5px;
+}
+
+input[type="text"] {
+	padding-left: 10px;
+	min-width: 125px;
+}
+
+input[type="password"] {
+	font: small-caption;
+	font-size: 16px;
+}
+
+input:hover[type="submit"] {
+	cursor: pointer;
+}
+
+form[action="/cgi-bin/login_proc.cgi"] table {
+	display: flex;
+	justify-content: center;
+}
+
+form[action="/cgi-bin/packages_ipkg_proc.cgi"] td input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]) {
+	width: 100%;
+}
+
+form[action="/cgi-bin/packages_opkg_proc.cgi"] td input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]) {
+	width: 100%;
+}
+
+form[action="/cgi-bin/packages_ffp_proc.cgi"] td input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]) {
+	width: 100%;
+}
+
+form[action="/cgi-bin/packages_ffp_proc.cgi"] select {
+	width: 100%;
+}
+
+
+/*Fonts*/
+
+.title,
+.warn,
+.error {
+	text-align: center;
+}
+.warn,
+.blue {
+	color: #78cdef;
+}
+.green {
+	color: green;
+}
+.error,
+.red {
+	color: #e84747;
+	text-decoration: none;
+}
+.highcol {
+	text-align: center;
+}
+
+img[alt="help"], .icon-help {
+	display: none;
+}
+
+/*Menu*/
+.menu {
+	font-weight: bold;
+}
+.hmenu ul {
+	display: flex;
+	justify-content: space-around;
+}
+.menu a,
+.menu label {
+	display: block;
+	text-decoration: none;
+	color: #F0F0F0;
+	text-align: center;
+}
+.menu li:hover,
+.menu label:hover {
+	background-color: #aaaaaa;
+}
+.menu ul,
+ul.menu {
+	padding: 0px;
+	margin: 0px;
+}
+.menu li {
+	display: block;
+	position: relative;
+	list-style: none;
+}
+.menu li ul,
+.menu input {
+	display: none;
+}
+
+/* horizontal menu */
+.hmenu li {
+	float: left;
+	width: 90px;
+	background-color: #444;
+	z-index: 1000;
+	padding: 5px;
+}
+.hmenu .short li {
+	width: 12em;
+}
+.hmenu li ul {
+	position: absolute;
+	left: 0;
+	margin-top: 5px;
+}
+.hmenu li:hover ul {
+	display: block;
+}
+.hmenu li:hover ul li {
+	border-bottom: 1px solid #aaa;
+	width: 90px;
+}
+.hmenu li:first-of-type li ul {
+	border: none;
+}
+.hmenu li:first-of-type>ul>li:last-of-type {
+	padding: 0;
+}
+.navbar {
+	color: #fff;
+	justify-content: center;
+}
+.navbar button span {
+	color: #fff;
+}
+.navbar-nav.mr-auto {
+	align-items: center;
+	width: 100%;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.nav-item.dropdown.show {
+	text-align: center;
+}
+.dropdown-menu.show {
+	margin-top: 0;
+}
+.dropdown-menu.show>li {
+	background-color: #585858;
+}
+.nav-item label,
+a.nav-link {
+	padding: 10px 0;
+}
+.nav-item:hover,
+.nav-link:hover,
+.dropdown.show {
+	background-color: #aaa;
+}
+.dropdown-menu {
+	min-width: 0;
+	width: 100%;
+}
+#menu>li.nav-item.dropdown.show {
+	border-bottom: none;
+}
+#menu>li {
+	min-width: 100px;
+	text-align: center;
+}
+#menu>li.nav-item.dropdown>label {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 0;
+}
+#menu>li.nav-item.dropdown:first-of-type>ul>li {
+	width: 33.3333%;
+	float: left;
+}
+li.nav-item.dropdown.show label {
+	background-color: #adadad;
+}
+ul:not(.dropdown-menu.show) li.nav-item>a {
+	text-decoration: none;
+	width: 100%;
+	display: block;
+}
+#menu>li:first-child>a {
+	display: block;
+	width: 100%;
+	padding: 10px 0;
+	text-decoration: none;
+}
+.dropdown-menu.show {
+	text-align: center;
+}
+.dropdown input {
+	display: none;
+}
+.navbar-nav .dropdown-menu {
+	background: #585858;
+	border: none;
+	color: #fff;
+	padding: 0;
+}
+.navbar-light .navbar-toggler {
+	border: none;
+}
+.nav-link {
+	color: #fff !important;
+	padding: 0;
+}
+
+/* Shortcuts */
+.short {
+	padding: 0px;
+	margin: 0px;
+	font-weight: normal;
+}
+ul.short {
+	border: none !important;
+	margin-top: 0 !important;
+}
+
+/* tooltips */
+.ttip {
+	font-family: sans-serif;
+	border: solid 2px white;
+	padding: 10px;
+	color: #fff;
+	background-color: #585858;
+	position: absolute;
+	visibility: hidden;
+	border-radius: 8px;
+	z-index: 200;
+}
+
+/* bargraphs */
+.meter-wrap {
+	position: relative;
+	z-index: 100;
+}
+.meter-wrap,
+.meter-value,
+.meter-text {
+	width: 100%;
+	height: 1.2em;
+}
+.meter-wrap,
+.meter-value {
+	background: #bdbdbd top left no-repeat;
+}
+.meter-text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	width: 100%;
+	font-size: .9em;
+}
+
+/*Network status*/
+#network_st strong:before {
+	content: " ";
+	padding: 15px 0px 15px 0px;
+}
+#network_st strong:not(:first-of-type) {
+	margin-left: 1.5em;
+}
+#network_st strong:first-of-type {
+	padding-left: 5px;
+}
+#network_st strong:not(:first-of-type):before {
+	content: " | ";
+}
+#network_st strong:not(:first-of-type) {
+	margin-left: 0;
+}
+@media screen and (max-device-width: 850px) {
+	body {
+		max-width: 100vw;
+	}
+	
+	body>div,
+	body>form,
+	body>fieldset {
+		max-width: 95vw;
+	}
+}
+@media screen and (max-device-width: 767px) {
+	body {
+		overflow-x: hidden;
+		display: flex;
+		flex-direction: column;
+		max-width: 100vw;
+	}
+	
+	body>div,
+	body>form,
+	body>fieldset {
+		max-width: 95vw;
+	}
+	
+	table::-webkit-scrollbar:horizontal {
+		height: 10px;
+	}
+	
+	table::-webkit-scrollbar-thumb {
+		border-radius: 8px;
+		border: 2px solid white;
+		background-color: #444;
+	}
+	
+	table::-webkit-scrollbar-track {
+		background-color: #bdbdbd;
+		border-radius: 8px;
+	}
+	
+	.menu.hmenu ul {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+	}
+	
+	.menu.hmenu:first-of-type li {
+		width: 100%;
+	}
+
+	#menu>li {
+		width: 100%;
+		border-bottom: 1px solid white;
+	}
+	
+	#systems_st tr:first-of-type td {
+		width: 50%;
+		float: left;
+	}
+	
+	.meter-wrap {
+		min-width: 15vw;
+	}
+	
+	#disks_st table,
+	#mounted_filesystems_st table,
+	#mounted_remote_filesystems_st table,
+	#backup_st table,
+	#filesystem_maintenance_st table,
+	#printers_st table {
+		overflow-x: scroll;
+		display: block;
+	}
+	
+	#raid_st table,
+	#mounted_filesystems_st table {
+		display: table;
+	}
+	
+	#disks_st table::-webkit-scrollbar,
+	#raid_st table::-webkit-scrollbar,
+	#mounted_filesystems_st table::-webkit-scrollbar,
+	#mounted_remote_filesystems_st table::-webkit-scrollbar,
+	#backup_st table::-webkit-scrollbar,
+	#filesystem_maintenance_st table::-webkit-scrollbar,
+	#printers_st table::-webkit-scrollbar {
+		-webkit-appearance: none;
+	}
+	
+	#disks_st table tbody,
+	/*#mounted_filesystems_st table tbody,*/
+	#mounted_remote_filesystems_st table tbody,
+	#backup_st table tbody,
+	#filesystem_maintenance_st table tbody,
+	#printers_st table tbody {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		justify-content: space-between;
+	}
+	
+	div:not(#raid_st):not(#mounted_filesystems_st) table th {
+		border: none;
+		text-align: left !important;
+	}
+	
+	#systems_st tr {
+		display: block;
+		float: left;
+		width: 100%;
+	}
+	
+	#disks_st tr,
+	/*#mounted_filesystems_st tr,*/
+	#mounted_remote_filesystems_st tr,
+	#backup_st tr,
+	#filesystem_maintenance_st tr,
+	#printers_st tr {
+		display: block;
+		float: left;
+	}
+	
+	#disks_st tr:first-of-type,
+	/*#mounted_filesystems_st tr:first-of-type,*/
+	#mounted_remote_filesystems_st tr:first-of-type,
+	#backup_st tr:first-of-type,
+	#filesystem_maintenance_st tr:first-of-type,
+	#printers_st tr:first-of-type {
+		position: sticky;
+		position: -webkit-sticky;
+		left: 0;
+		background-color: #444;
+		z-index: 200;
+		min-width: 20vw;
+	}
+	
+	#disks_st td,
+	/*#mounted_filesystems_st td,*/
+	#mounted_remote_filesystems_st td,
+	#backup_st td,
+	#filesystem_maintenance_st td,
+	#printers_st td {
+		min-width: 25vw;
+	}
+	
+	#systems_st th,
+	#systems_st td,
+	#disks_st th,
+	#disks_st td,
+	/*#mounted_filesystems_st th,
+	#mounted_filesystems_st td,*/
+	#mounted_remote_filesystems_st th,
+	#mounted_remote_filesystems_st td,
+	#remotely_mounted_filesystems_st th,
+	#remotely_mounted_filesystems_st td,
+	#backup_st th,
+	#backup_st td,
+	#filesystem_maintenance_st th,
+	#filesystem_maintenance_st td,
+	#printers_st th,
+	#printers_st td {
+		display: block;
+	}
+
+	#disks_st table tr:nth-child(2):last-of-type,
+	/*#mounted_filesystems_st table tr:nth-child(2):last-of-type,*/
+	#mounted_remote_filesystems_st table tr:nth-child(2):last-of-type,
+	#backup_st table tr:nth-child(2):last-of-type,
+	#filesystem_maintenance_st table tr:nth-child(2):last-of-type,
+	#printers_st table tr:nth-child(2):last-of-type {
+		min-width: 60vw;
+	}
+
+	
+	.bgl {
+		width: 100%;
+	}
+	
+	#systems_st table tr:nth-child(2) td:nth-child(even) {
+		padding: 0;
+	}
+	
+	#systems_st tr:not(:first-of-type) {
+		width: 50%;
+		float: left;
+	}
+	
+	#network_st strong {
+		padding-left: 0 !important;
+	}
+	
+	#network_st strong:before {
+		display: block;
+		content: " ";
+		padding: 5px 0px 5px 0px;
+	}
+	
+	#network_st strong:not(:first-of-type):before {
+		content: " ";
+		padding: 5px 0px 5px 0px;
+	}
+	
+	#network_st strong:after {
+		content: " ";
+	}
+	
+	#network_st strong:not(:first-of-type) {}
+}
+@media screen and (max-device-width: 576px) {
+	.menu.hmenu li {
+		width: 100%;
+		text-align: center;
+	}
+	
+	#menu>li:first-child {
+		margin-top: 8px;
+	}
+
+	
+	ul:not(.dropdown-menu.show) li.nav-item>a {
+		/*border-bottom: 1px solid #fff;*/
+	}
+	
+	#menu>li:first-child>a {
+		/*border-bottom: 1px solid #fff;*/
+	}
+	
+	#menu>li.nav-item.dropdown>label {
+		/*border-bottom: 1px solid #fff;*/
+	}
+	
+	#disks_st tr:first-of-type,
+	#mounted_filesystems_st tr:first-of-type,
+	#mounted_remote_filesystems_st tr:first-of-type,
+	#backup_st tr:first-of-type,
+	#filesystem_maintenance_st tr:first-of-type,
+	#printers_st tr:first-of-type {
+		min-width: 30vw;
+	}
+	
+	#disks_st td,
+	#raid_st td,
+	#mounted_filesystems_st td,
+	#mounted_remote_filesystems_st td,
+	#backup_st td,
+	#filesystem_maintenance_st td,
+	#printers_st td {
+		min-width: 60vw;
+	}
+	
+	#systems_st tr:first-of-type td {
+		width: 100%;
+		float: left;
+	}
+	
+	#systems_st tr:not(:first-of-type) {
+		width: 100%;
+	}
+	
+	#raid_st table tbody,
+	#mounted_filesystems_st table tbody {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		justify-content: flex-start;
+	}
+	
+	#raid_st th,
+	#raid_st td,
+	#mounted_filesystems_st th,
+	#mounted_filesystems_st td {
+		display: block;
+	}
+	
+	#raid_st td,
+	#mounted_filesystems_st td {
+		min-width: 25vw;
+	}
+	
+	#raid_st tr,
+	#mounted_filesystems_st tr {
+		display: block;
+		float: left;
+	}
+	
+	#raid_st tr:last-of-type,
+	#mounted_filesystems_st tr:last-of-type {
+		min-width: 60vw;
+	}
+	
+	#raid_st tr:first-of-type,
+	#mounted_filesystems_st tr:first-of-type {
+		position: sticky;
+		position: -webkit-sticky;
+		left: 0;
+		background-color: #444;
+		z-index: 200;
+		min-width: 30vw;
+	}
+}
