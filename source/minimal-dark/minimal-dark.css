@@ -123,6 +123,7 @@ input {
 	background-color: #fff;
 	color: #444;
 	border-radius: 5px;
+	border: none;
 }
 input[type=submit]:disabled {
 	background-color: #585858;
